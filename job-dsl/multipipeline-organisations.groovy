@@ -1,12 +1,12 @@
 organizationFolder('GitLab Organization Folder') {
     description("GitLab org folder created with Job DSL")
-    displayName('My Project')
+    displayName('organizationFolder')
     // "Projects"
     organizations {
         gitLabSCMNavigator {
-            projectOwner("baymac")
-            credentialsId("i<3GitLab")
-            serverName("gitlab-3214")
+            projectOwner("opeomotayo")
+            credentialsId("gitlab-creds")
+            serverName("gitlab-creds")
             // "Traits" ("Behaviours" in the GUI) that are "declarative-compatible"
             traits {
                 subGroupProjectDiscoveryTrait() // discover projects inside subgroups

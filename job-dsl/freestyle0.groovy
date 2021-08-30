@@ -1,4 +1,4 @@
-freeStyleJob('Seed_job') {
+freeStyleJob('freeStyleJob0') {
     scm {
         git{
             branch('master')

@@ -1,4 +1,4 @@
-multibranchPipelineJob('example') {
+multibranchPipelineJob('multibranchPipelineJob0') {
     branchSources {
         git {
             id('123456789') // IMPORTANT: use a constant and unique identifier

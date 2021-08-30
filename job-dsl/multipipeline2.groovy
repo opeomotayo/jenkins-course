@@ -1,4 +1,4 @@
-multibranchPipelineJob('configuration-as-code') {
+multibranchPipelineJob('multibranchPipelineJob2') {
     branchSources {
         git {
             id = 'configuration-as-code'
