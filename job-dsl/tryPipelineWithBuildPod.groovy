@@ -15,16 +15,19 @@ pipelineJob('pipeline-job-with-buildpod') {
 
     definition {
         cpsScm {
-            git {
-                extensions {
-                    wipeOutWorkspace()
+            scm {
+                git {
+                    extensions {
+                        wipeOutWorkspace()
+                    }
+                    remote {
+                        url('ssh://git@gitlab.com:opeomotayo/helloworld-app.git')
+                        credentials('jenkins')
+                    }
+                    branch("$BRANCH")
                 }
-                remote {
-                    url('ssh://git@gitlab.com:opeomotayo/helloworld-app.git')
-                    credentials('jenkins')
-                }
-                branch("$BRANCH")
             }
+
             scriptPath('Jenkinsfile')
         }
     }
