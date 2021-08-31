@@ -1,6 +1,6 @@
 organizationFolder('GitLab Organization Folder') {
     description("GitLab org folder created with Job DSL")
-    displayName('organizationFolder')
+    displayName('try-organization-folder')
     // "Projects"
     organizations {
         gitLabSCMNavigator {
