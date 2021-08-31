@@ -1,8 +1,8 @@
-folder('project-a') {
-    displayName('Project A')
+folder('folder-a') {
+    displayName('Folder A')
     description('Folder for project A')
 }
 
-folder('project-a/testing') {
+folder('folder-a/testing') {
     description('Folder containing all QA jobs for project A')
 }
