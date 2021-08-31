@@ -1,29 +1,33 @@
 pipelineJob('pipeline-job-with-build-pod') {
     definition {
-        cps {
-            script('''
-        pipeline {
-            agent {
-                kubernetes {
-                defaultContainer 'docker'
-                yamlFile 'BuildPod.yaml'
-                }
-            }
-            stages {
-                stage('Stage 1') {
-                    steps {
-                        echo 'logic'
-                    }
-                }
-                stage('Stage 2') {
-                    steps {
-                        echo 'logic'
-                    }
-                }
+        description('')
+        logRotator {
+            numToKeep(10)
+            daysToKeep(5)
+        }
+        properties {
+            gitLabConnection {
+                gitLabConnection('gitlab-creds')
             }
         }
-      '''.stripIndent())
-            sandbox()
+        parameters {
+            stringParam('BRANCH', 'master', 'Branch')
+        }
+
+        definitions {
+            cpsScm {
+                git {
+                    extension {
+                        wipeOutWorkspace()
+                    }
+                    remote {
+                        url('ssh://git@gitlab.com:opeomotayo/helloworld-app.git')
+                        credentials('jenkins')
+                    }
+                    branch("$BRANCH")
+                }
+            }
+            scriptPath('Jenkinsfile')
         }
     }
 }
