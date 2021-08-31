@@ -24,7 +24,7 @@ pipelineJob('pipeline-job-with-buildpod') {
                         url('https://gitlab.com/opeomotayo/try-python-app.git')
                         credentials('gitlab-creds')
                     }
-                    branch('master')
+                    branch('main')
                 }
             }
 
