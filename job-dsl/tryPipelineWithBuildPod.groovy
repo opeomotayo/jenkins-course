@@ -22,7 +22,7 @@ pipelineJob('pipeline-job-with-buildpod') {
                     }
                     remote {
                         url('https://git@gitlab.com:opeomotayo/helloworld-app.git')
-                        credentials('gitlab-creds')
+//                        credentials('gitlab-creds')
                     }
                     branch('master')
                 }
