@@ -24,7 +24,7 @@ pipelineJob('pipeline-job-with-buildpod') {
                         url('ssh://git@gitlab.com:opeomotayo/helloworld-app.git')
                         credentials('jenkins')
                     }
-                    branch("${BRANCH}")
+                    branch('master')
                 }
             }
 
