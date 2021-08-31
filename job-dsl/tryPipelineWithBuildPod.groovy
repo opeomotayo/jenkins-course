@@ -13,7 +13,7 @@ pipelineJob('pipeline-job-with-buildpod') {
         stringParam('BRANCH', 'master', 'Branch')
     }
 
-    definitions {
+    definition {
         cpsScm {
             git {
                 extension {
