@@ -21,7 +21,7 @@ pipelineJob('pipeline-job-with-buildpod') {
                         wipeOutWorkspace()
                     }
                     remote {
-                        url('git@gitlab.com:opeomotayo/helloworld-app.git')
+                        url('https://git@gitlab.com:opeomotayo/helloworld-app.git')
                         credentials('gitlab-creds')
                     }
                     branch('master')
