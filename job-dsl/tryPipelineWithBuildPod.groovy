@@ -1,5 +1,5 @@
 pipelineJob('pipeline-job-with-buildpod') {
-    description('pipeline-job-with-buildpod')
+    description('Pipeline job with buildpod')
     logRotator {
         numToKeep(10)
         daysToKeep(5)
@@ -16,7 +16,7 @@ pipelineJob('pipeline-job-with-buildpod') {
     definition {
         cpsScm {
             git {
-                extension {
+                extensions {
                     wipeOutWorkspace()
                 }
                 remote {
@@ -25,9 +25,8 @@ pipelineJob('pipeline-job-with-buildpod') {
                 }
                 branch("$BRANCH")
             }
+            scriptPath('Jenkinsfile')
         }
-        scriptPath('Jenkinsfile')
     }
-
 }
 
