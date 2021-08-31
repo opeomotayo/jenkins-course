@@ -1,5 +1,5 @@
-folder('folder-a') {
-    displayName('Folder A')
+folder('Folder A') {
+    displayName('folder-a')
     description('Folder for project A')
 }
 
